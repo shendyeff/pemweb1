@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulir Peminjaman Buku - Perpuskota Madiun</title>
+    <link rel="stylesheet" href="styleFormPerpus.css" />
+  </head>
+  <body>
+    <header><h1>PERPUSTAKAAN KOTA MADIUN</h1></header>
+    <h2>Formulir Peminjaman Buku</h2>
+    <form action="proses_peminjaman.php" method="post">
+      <label for="nama">Nama:</label>
+      <input type="text" id="nama" name="nama" required />
+
+      <label for="alamat">Alamat:</label>
+      <textarea id="alamat" name="alamat" rows="4" required></textarea>
+
+      <label for="telepon">Nomor Telepon:</label>
+      <input
+        type="tel"
+        id="telepon"
+        name="telepon"
+        pattern="[0-9]{10}"
+        placeholder="Contoh: 081234567890"
+        required
+      />
+
+      <label for="buku">Buku yang Ingin Dipinjam:</label>
+      <input type="text" id="buku" name="buku" required />
+
+      <label for="kategori">Kategori Buku:</label>
+      <select id="kategori" name="kategori" required>
+        <option value="fiksi">Fiksi</option>
+        <option value="nonfiksi">Nonfiksi</option>
+      </select>
+
+      <label for="jumlah">Jumlah Buku:</label>
+      <input type="number" id="jumlah" name="jumlah" min="1" required />
+
+      <input type="submit" value="Ajukan Peminjaman" />
+    </form>
+  </body>
+</html>
