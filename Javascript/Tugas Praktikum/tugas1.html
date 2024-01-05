@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Konversi Nilai</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Konversi Nilai Angka ke Nilai Huruf</h2>
+
+    <label for="nilai">Masukkan Nilai Angka:</label>
+    <input type="number" id="nilai" placeholder="Masukkan nilai di sini" />
+    <button onclick="konversiNilai()">Konversi</button>
+
+    <p id="hasilKonversi"></p>
+
+    <script>
+      function konversiNilai() {
+        // Dapatkan nilai dari input
+        var nilaiAngka = parseInt(document.getElementById("nilai").value);
+
+        // Lakukan konversi sesuai ketentuan
+        var nilaiHuruf;
+        if (nilaiAngka >= 0 && nilaiAngka <= 40) {
+          nilaiHuruf = "E";
+        } else if (nilaiAngka <= 55) {
+          nilaiHuruf = "D";
+        } else if (nilaiAngka <= 60) {
+          nilaiHuruf = "C";
+        } else if (nilaiAngka <= 65) {
+          nilaiHuruf = "BC";
+        } else if (nilaiAngka <= 70) {
+          nilaiHuruf = "B";
+        } else if (nilaiAngka <= 80) {
+          nilaiHuruf = "AB";
+        } else if (nilaiAngka <= 100) {
+          nilaiHuruf = "A";
+        } else {
+          nilaiHuruf = "Nilai tidak valid";
+        }
+
+        // Tampilkan hasil konversi
+        document.getElementById("hasilKonversi").innerHTML =
+          "Nilai Huruf: " + nilaiHuruf;
+      }
+    </script>
+  </body>
+</html>

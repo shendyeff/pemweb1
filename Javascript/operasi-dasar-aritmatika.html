@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contoh Program Javascript</title>
+  </head>
+  <script>
+    function pesan() {
+      alert("memanggil javascript lewat body onload");
+    }
+  </script>
+  <body onload="pesan()"></body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contoh Program Javascript</title>
+  </head>
+  <script>
+    function test(val1, val2) {
+      document.write("<br> Semua Operasi dari Bilangan 9 dan 4 <br>");
+      document.write("<br>" + "Perkalian : <br>");
+      document.write(val1 * val2);
+      document.write("<br>" + "Pembagian : <br>");
+      document.write(val1 / val2);
+      document.write("<br>" + "Penjumlahan : <br>");
+      document.write(val1 + val2);
+      document.write("<br>" + "Pengurangan : <br>");
+      document.write(val1 - val2);
+      document.write("<br>" + "Modulus : <br>");
+      document.write(val1 % val2);
+    }
+  </script>
+  <body>
+    <input
+      type="button"
+      name="button1"
+      value="Arithemtic"
+      onclick="test(9,4)"
+    />
+  </body>
+</html>
