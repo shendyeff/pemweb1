@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Formulir Pendaftaran Pasien - Klinik Sehat Puskesmas Manguharjo
+    </title>
+    <link rel="stylesheet" href="styleFormKlinik.css" />
+  </head>
+  <body>
+    <h2>Formulir Pendaftaran Pasien</h2>
+    <form action="proses_pendaftaran.php" method="post">
+      <label for="nama">Nama Lengkap:</label>
+      <input type="text" id="nama" name="nama" required />
+
+      <label for="alamat">Alamat:</label>
+      <textarea id="alamat" name="alamat" rows="4" required></textarea>
+
+      <label for="telepon">Nomor Telepon:</label>
+      <input
+        type="tel"
+        id="telepon"
+        name="telepon"
+        pattern="[0-9]{10}"
+        placeholder="Contoh: 081234567890"
+        required
+      />
+
+      <label for="jenis_kelamin">Jenis Kelamin:</label>
+      <select id="jenis_kelamin" name="jenis_kelamin" required>
+        <option value="laki-laki">Laki-laki</option>
+        <option value="perempuan">Perempuan</option>
+      </select>
+
+      <label for="tanggal_lahir">Tanggal Lahir:</label>
+      <input type="date" id="tanggal_lahir" name="tanggal_lahir" required />
+
+      <label for="keluhan">Keluhan:</label>
+      <textarea id="keluhan" name="keluhan" rows="4" required></textarea>
+
+      <input type="submit" value="Daftar" />
+    </form>
+  </body>
+</html>
